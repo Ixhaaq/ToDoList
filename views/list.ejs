@@ -1,54 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <title>To Do List</title>
-</head>
-
-<body>
-
-    <div class="box" id="heading">
-
-        <h1>
-            <%= listTitle %>
-        </h1>
-
-    </div>
+<%- include("header") -%>
 
 
-    <div class="box">
-        <% for (let i=0; i<newListItems.length; i++) { %>
+<div class="box" id="heading">
 
-            <div class="item">
+    <h1>
+        <%= listTitle %>
+    </h1>
 
-                <input type="checkbox" name="" id="">
-
-                <p><%= newListItems[i] %></p>
-
-            </div>
-
-            <% } %>
-
-                <form class="item" action="/" method="post">
-                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-                    <button type="submit" name="list" value=<%= listTitle %>>+</button>
-                </form>
-
-    </div>
+</div>
 
 
+<div class="box">
+    <% for (let i=0; i<newListItems.length; i++) { %>
 
+        <div class="item">
 
+            <input type="checkbox" name="" id="">
 
-</body>
+            <p>
+                <%= newListItems[i] %>
+            </p>
 
-<footer>
-    Copyright 2022 Ishaaq Malik
-</footer>
+        </div>
 
-</html>
+        <% } %>
+
+            <form class="item" action="/" method="post">
+                <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                <button type="submit" name="list" value=<%=listTitle %>>+</button>
+            </form>
+
+</div>
+
+<%- include("footer") -%>
