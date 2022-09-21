@@ -6,7 +6,7 @@ const date = require(__dirname + "/date.js");
 const app = express();
 
 
-const items = ["Buy Food", "Cook Food", "Eat Food"];
+const items = ["Udemy Primary", "Udemy Secondary", "Project", "DSNA", "90 Day Devops", "Reading","Gym"];
 const workItems = [];
 
 
