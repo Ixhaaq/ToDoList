@@ -15,7 +15,8 @@ h1 {
 }
 
 .box {
-  max-width: 400px;
+  max-width: 500px;
+
   margin: 50px auto;
   background: white;
   border-radius: 5px;
@@ -23,7 +24,7 @@ h1 {
 }
 
 #heading {
-  background-color: aqua;
+  background-color: #9614d0;
   text-align: center;
   font-weight: 800;
 }
@@ -41,7 +42,7 @@ h1 {
 
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: aquamarine;
+  text-decoration-color: #9614d0;
 }
 
 input[type="checkbox"] {
@@ -56,7 +57,7 @@ p {
   color: #000000;
 }
 
-form {
+form.item {
   text-align: center;
   margin-left: 20px;
 }
@@ -66,10 +67,12 @@ button {
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: aqua;
+  background-color: #9614d0;
   color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
+  padding-top: 6px;
+  
   border-width: 0;
 }
 
@@ -95,7 +98,7 @@ input[type="text"]:focus {
 }
 
 footer {
-  color: white;
+  color: #9614d0;
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }

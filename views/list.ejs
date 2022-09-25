@@ -1,4 +1,5 @@
- 
+<%- include("partials/header") -%>
+
 
 <div class="box" id="heading">
 
@@ -10,25 +11,31 @@
 
 
 <div class="box">
-    <% for (let i=0; i<newListItems.length; i++) { %>
+
+    
+
+    <% newListItems.forEach(function(item){ %>
+        <form action="/delete" method="post">
 
         <div class="item">
 
-            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="checkbox" value="<%= item._id %>" onChange = "this.form.submit()" >
 
             <p>
-                <%= newListItems[i] %>
+                <%= item.name %>
             </p>
 
         </div>
-
-        <% } %>
+        <input type="hidden" name="listName" value="<%=listTitle %>">
+    </form>
+        <% }) %>
 
             <form class="item" action="/" method="post">
                 <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
-                <button type="submit" name="list" value=<%=listTitle %>>+</button>
+                <button type="submit" name="list" value="<%=listTitle %>">+</button>
             </form>
 
 </div>
 
-<%- include("footer") -%>
+<%- include("partials/footer") -%>
+
